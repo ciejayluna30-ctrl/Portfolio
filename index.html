@@ -409,20 +409,60 @@
           </div>
         </div>
 
+        <!-- ══════════════════════════════════
+             CERTIFICATES — clickable, opens PDF
+             Files: images/certificates/1.pdf, 2.pdf, 3.pdf ...
+             Update the cert-name, cert-from, and href for each one.
+        ══════════════════════════════════ -->
         <div class="resume-block">
           <div class="rb-title">Certificates</div>
-          <div class="cert-item">
+
+          <a class="cert-item" href="images/certificates/1.pdf" onclick="openPdf(event, 'images/certificates/1.pdf', 'Certificate 1')">
             <div class="cert-icon">🏅</div>
-            <div><div class="cert-name">Add Certificate Name Here</div><div class="cert-from">Issuing Organization · Year</div></div>
-          </div>
-          <div class="cert-item">
+            <div>
+              <div class="cert-name">Driving Growth through Technology
+Transfer Pathways</div>
+              <div class="cert-from">DOST · 2025</div>
+            </div>
+            <span class="cert-arrow">View ↗</span>
+          </a>
+
+          <a class="cert-item" href="images/certificates/2.pdf" onclick="openPdf(event, 'images/certificates/2.pdf', 'Certificate 2')">
             <div class="cert-icon">🏅</div>
-            <div><div class="cert-name">Add Certificate Name Here</div><div class="cert-from">Issuing Organization · Year</div></div>
-          </div>
-          <div class="cert-item">
+            <div>
+              <div class="cert-name">Practical AI for the next IT Leaders</div>
+              <div class="cert-from">Auditorium · 2025</div>
+            </div>
+            <span class="cert-arrow">View ↗</span>
+          </a>
+
+          <a class="cert-item" href="images/certificates/3.pdf" onclick="openPdf(event, 'images/certificates/3.pdf', 'Certificate 3')">
             <div class="cert-icon">🏅</div>
-            <div><div class="cert-name">Add Certificate Name Here</div><div class="cert-from">Issuing Organization · Year</div></div>
-          </div>
+            <div>
+              <div class="cert-name">Future Proofing Your Career: Skills for the Digital Age</div>
+              <div class="cert-from">BOSSJOB · 2024</div>
+            </div>
+            <span class="cert-arrow">View ↗</span>
+          </a>
+          <a class="cert-item" href="images/certificates/4.pdf" onclick="openPdf(event, 'images/certificates/4.pdf', 'Certificate 4')">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <div class="cert-name">The Digital Fabric</div>
+              <div class="cert-from">Crown Legacy Hotel · 2025</div>
+            </div>
+            <span class="cert-arrow">View ↗</span>
+          </a>
+          <a class="cert-item" href="images/certificates/5.pdf" onclick="openPdf(event, 'images/certificates/5.pdf', 'Certificate 5')">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <div class="cert-name">Navigating the tech industry post-graduation</div>
+              <div class="cert-from">Auditorium · 2025</div>
+            </div>
+            <span class="cert-arrow">View ↗</span>
+          </a>
+
+          <!-- To add more certificates, copy one <a class="cert-item"> block above
+               and update: href, onclick path, cert-name, cert-from -->
         </div>
       </div>
 
@@ -569,7 +609,48 @@
     <div class="footer-name">Christopher Acbang Luna Jr.</div>
     <div class="footer-note">IT Student · Built with care · 2025</div>
   </footer>
+<!-- PDF VIEWER OVERLAY -->
+  <div class="pdf-overlay" id="pdf-overlay" onclick="closePdf()">
+    <div class="pdf-modal" onclick="event.stopPropagation()">
+      <div class="pdf-modal-header">
+        <button class="pdf-btn-back" onclick="closePdf()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+          Back
+        </button>
+        <span class="pdf-modal-title" id="pdf-modal-title">Certificate</span>
+        <div class="pdf-modal-btns">
+          <a class="pdf-btn-download" id="pdf-download-btn" href="#" download>⬇ Download</a>
+          <button class="pdf-btn-close" onclick="closePdf()">✕</button>
+        </div>
+      </div>
+      <div class="pdf-frame-wrap">
+        <iframe id="pdf-frame" src="" title="Certificate PDF"></iframe>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
+  <script>
+    /* ── PDF VIEWER ── */
+    function openPdf(e, src, title) {
+      e.preventDefault();
+      document.getElementById('pdf-frame').src        = src;
+      document.getElementById('pdf-modal-title').textContent = title;
+      document.getElementById('pdf-download-btn').href       = src;
+      document.getElementById('pdf-download-btn').download   = title + '.pdf';
+      document.getElementById('pdf-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePdf() {
+      document.getElementById('pdf-overlay').classList.remove('open');
+      document.getElementById('pdf-frame').src = ''; // stop loading
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closePdf();
+    });
+  </script>
 </body>
 </html>

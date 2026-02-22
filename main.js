@@ -98,14 +98,14 @@ const serviceData = {
     note: 'Posters, social media graphics, banners, and visual branding using Canva and Photoshop.',
     folder: 'images/graphic',
     count: 3,
-    ext: 'jpg',
+    ext: 'png',
   },
   'web-design': {
     title: 'Web Design',
     note: 'Clean, responsive websites built from scratch using HTML, CSS, JavaScript, and PHP.',
     folder: 'images/web',
     count: 3,
-    ext: 'jpg',
+    ext: 'png',
   },
   'vexel-art': {
     title: 'Vexel Art',
