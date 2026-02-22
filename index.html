@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Christopher Acbang Luna Jr. (Ciejay) — IT Student, Frontend Developer & UI/UX Enthusiast from the Philippines.">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <title>Ciejay Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">ciejay</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+
+  <!-- NOISE -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="https://github.com/ciejayluna30-ctrl" target="_blank" rel="noopener" class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="logo-gh-icon">
+        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+      </svg>
+    </a>
+
+    <!-- Desktop nav links stay inside nav -->
+    <ul class="nav-links-desktop">
+      <li><a href="#home"     class="nav-link">Home</a></li>
+      <li><a href="#about"    class="nav-link">About</a></li>
+      <li><a href="#skills"   class="nav-link">Skills</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#resume"   class="nav-link">Resume</a></li>
+      <li><a href="#contact"  class="nav-link">Contact</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- FULLSCREEN MOBILE MENU — outside nav, covers entire viewport -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#home"     class="mob-link">Home</a></li>
+      <li><a href="#about"    class="mob-link">About</a></li>
+      <li><a href="#skills"   class="mob-link">Skills</a></li>
+      <li><a href="#services" class="mob-link">Services</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#resume"   class="mob-link">Resume</a></li>
+      <li><a href="#contact"  class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-tag reveal-fast">Available for opportunities</div>
+        <p class="hero-hi reveal-fast" style="--d:.1s">Hello, I'm</p>
+        <h1 class="hero-name reveal-fast" style="--d:.2s">
+          Christopher<br><span class="accent">Acbang Luna Jr.</span>
+        </h1>
+        <p class="hero-alias reveal-fast" style="--d:.3s">IT Student</p>
+        <p class="hero-desc reveal-fast" style="--d:.4s">
+          Passionate about building clean, fast web experiences and crafting
+          thoughtful digital designs.
+        </p>
+        <div class="hero-btns reveal-fast" style="--d:.5s">
+          <a href="#projects" class="btn-primary">View Work</a>
+          <a href="#contact"  class="btn-outline">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-fast" style="--d:.3s">
+        <div class="profile-ring">
+          <div class="profile-ring-inner">
+            <img src="images/1.JPG" alt="Christopher Acbang Luna Jr." class="profile-img">
+          </div>
+          <div class="ring-decor ring-1"></div>
+          <div class="ring-decor ring-2"></div>
+          <div class="status-badge">
+            <span class="status-dot"></span> Open to work
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec">
+    <div class="sec-label reveal">01 / Profile</div>
+    <h2 class="sec-title reveal" style="--d:.05s">About <span class="accent">Me</span></h2>
+
+    <div class="about-grid">
+      <div class="about-photo-col reveal" style="--d:.1s">
+        <div class="about-photo-wrap">
+          <img src="images/b2.jpg" alt="Ciejay" class="about-photo">
+          <div class="about-photo-border"></div>
+        </div>
+        <div class="about-quick-info">
+          <div class="info-row">
+            <span class="info-icon">📍</span>
+            <div>
+              <div class="info-label">Location</div>
+              <div class="info-val">Philippines · Caloocan City</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">🎓</span>
+            <div>
+              <div class="info-label">Degree</div>
+              <div class="info-val">BS Information Technology</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">💼</span>
+            <div>
+              <div class="info-label">Status</div>
+              <div class="info-val">Open to internship &amp; freelance</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">⚡</span>
+            <div>
+              <div class="info-label">Currently</div>
+              <div class="info-val">Building projects &amp; learning daily</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text-col reveal" style="--d:.15s">
+        <p class="about-bio">
+          I'm <strong>Christopher Acbang Luna Jr.</strong>, an IT student. I'm passionate about building clean and thoughtful
+          web experiences — from pixel-perfect layouts to smooth animations.
+        </p>
+        <p class="about-bio">
+          I started with curiosity about how websites work and never stopped exploring.
+          I enjoy working on projects that combine design and code — whether that's a
+          web app, a graphic, or a video edit. I believe good digital work should feel
+          both effortless and intentional.
+        </p>
+        <p class="about-bio">
+          When I'm not coding or designing, I'm behind a camera, strumming a guitar,
+          or cheering courtside. I bring the same energy and attention to detail
+          into everything I do.
+        </p>
+        <div class="interests-section">
+          <div class="interests-label">Interests</div>
+          <div class="interests-grid">
+            <div class="interest-chip"><span>📷</span> Photography</div>
+            <div class="interest-chip"><span>🎵</span> Music</div>
+            <div class="interest-chip"><span>🎬</span> Movies</div>
+            <div class="interest-chip"><span>🏀</span> Basketball</div>
+            <div class="interest-chip"><span>🎸</span> Guitar</div>
+            <div class="interest-chip"><span>🎮</span> Online Games</div>
+            <div class="interest-chip"><span>🎥</span> Videography</div>
+            <div class="interest-chip"><span>🎨</span> Making Arts</div>
+            <div class="interest-chip"><span>💃</span> Dancing</div>
+            <div class="interest-chip"><span>🎤</span> Singing</div>
+            <div class="interest-chip"><span>🌐</span> Browsing Online</div>
+            <div class="interest-chip"><span>✈️</span> Travel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="sec">
+    <div class="sec-label reveal">02 / Skills</div>
+    <h2 class="sec-title reveal" style="--d:.05s">Skills <span class="accent">&amp; Tools</span></h2>
+    <div class="skills-grid">
+
+      <!-- HTML5 -->
+      <div class="sk-card reveal" style="--d:.05s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/html.png" alt="HTML5" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">HTML5</div><div class="sk-exp">4 yrs exp</div></div>
+          <div class="sk-pct">90%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="90"></div></div>
+      </div>
+
+      <!-- CSS3 -->
+      <div class="sk-card reveal" style="--d:.08s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/css.png" alt="CSS3" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">CSS3</div><div class="sk-exp">4 yrs exp</div></div>
+          <div class="sk-pct">85%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="85"></div></div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="sk-card reveal" style="--d:.11s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/js.png" alt="JavaScript" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">JavaScript</div><div class="sk-exp">2 yrs exp</div></div>
+          <div class="sk-pct">75%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="75"></div></div>
+      </div>
+
+      <!-- PHP -->
+      <div class="sk-card reveal" style="--d:.14s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/php.png" alt="PHP" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">PHP</div><div class="sk-exp">2 yrs exp</div></div>
+          <div class="sk-pct">75%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="75"></div></div>
+      </div>
+
+      <!-- MySQL -->
+      <div class="sk-card reveal" style="--d:.17s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/mysql.png" alt="MySQL" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">MySQL</div><div class="sk-exp">2 yrs exp</div></div>
+          <div class="sk-pct">65%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="65"></div></div>
+      </div>
+
+      <!-- Canva -->
+      <div class="sk-card reveal" style="--d:.2s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/canva.png" alt="Canva" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">Canva</div><div class="sk-exp">5 yrs exp</div></div>
+          <div class="sk-pct">90%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="90"></div></div>
+      </div>
+
+      <!-- Figma -->
+      <div class="sk-card reveal" style="--d:.23s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/figma.png" alt="Figma" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">Figma</div><div class="sk-exp">2 yrs exp</div></div>
+          <div class="sk-pct">80%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="80"></div></div>
+      </div>
+
+      <!-- CapCut -->
+      <div class="sk-card reveal" style="--d:.26s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/capcut.png" alt="CapCut" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">CapCut</div><div class="sk-exp">3 yrs exp</div></div>
+          <div class="sk-pct">80%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="80"></div></div>
+      </div>
+
+      <!-- Photoshop -->
+      <div class="sk-card reveal" style="--d:.29s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/photoshop.png" alt="Photoshop" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">Photoshop</div><div class="sk-exp">1 yr exp</div></div>
+          <div class="sk-pct">60%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="60"></div></div>
+      </div>
+
+      <!-- Lightroom -->
+      <div class="sk-card reveal" style="--d:.32s">
+        <div class="sk-header">
+          <span class="sk-icon"><img src="images/logo/lightroom.png" alt="Lightroom" width="28" height="28" style="object-fit:contain;"></span>
+          <div><div class="sk-name">Lightroom</div><div class="sk-exp">4 yrs exp</div></div>
+          <div class="sk-pct">90%</div>
+        </div>
+        <div class="sk-bar"><div class="sk-fill" data-w="90"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="sec">
+    <div class="sec-label reveal">03 / Services</div>
+    <h2 class="sec-title reveal" style="--d:.05s">What I <span class="accent">Offer</span></h2>
+    <div class="services-grid">
+      <div class="svc-card reveal" style="--d:.05s">
+        <div class="svc-icon">🎬</div>
+        <div class="svc-name">Video Editing</div>
+        <p class="svc-desc">Basic video editing with transitions, color grading, and text overlays. Suitable for social media content, vlogs, and short-form videos.</p>
+        <button class="svc-btn" onclick="openService('video-editing')">View Examples →</button>
+      </div>
+      <div class="svc-card reveal" style="--d:.1s">
+        <div class="svc-icon">🎨</div>
+        <div class="svc-name">Graphic Designing</div>
+        <p class="svc-desc">Posters, social media graphics, banners, and visual content using Canva and Photoshop tailored to your brand identity.</p>
+        <button class="svc-btn" onclick="openService('graphic-design')">View Examples →</button>
+      </div>
+      <div class="svc-card reveal" style="--d:.15s">
+        <div class="svc-icon">💻</div>
+        <div class="svc-name">Web Design</div>
+        <p class="svc-desc">Clean, responsive websites built from scratch using HTML, CSS, JavaScript, and PHP — focusing on usability and aesthetics.</p>
+        <button class="svc-btn" onclick="openService('web-design')">View Examples →</button>
+      </div>
+      <div class="svc-card reveal" style="--d:.2s">
+        <div class="svc-icon">🖌️</div>
+        <div class="svc-name">Vexel Art</div>
+        <p class="svc-desc">Digital vector-style portraits and illustrations using photo references — great for personalized gifts or profile artwork.</p>
+        <button class="svc-btn" onclick="openService('vexel-art')">View Examples →</button>
+      </div>
+    </div>
+    <div class="modal-overlay" id="modal-overlay" onclick="closeService()">
+      <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeService()">✕</button>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <p class="modal-note" id="modal-note"></p>
+        <div class="modal-examples" id="modal-examples">
+          <div class="example-placeholder">
+            <span>🖼️</span>
+            <p>Examples coming soon — check back later!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="sec">
+    <div class="sec-label reveal">04 / Projects</div>
+    <h2 class="sec-title reveal" style="--d:.05s">Selected <span class="accent">Work</span></h2>
+    <div class="projects-list">
+      <div class="proj-card reveal" style="--d:.05s">
+        <div class="proj-top">
+          <div><div class="proj-date">2024</div><div class="proj-name">Art Gallery</div></div>
+          <a href="https://art-gallery-luna.vercel.app/" target="_blank" rel="noopener" class="proj-live-btn">Live ↗</a>
+        </div>
+        <p class="proj-desc">Personal art gallery showcase built using HTML, CSS, and JavaScript. Displays collections of artworks with interactive navigation and responsive design to explore creative pieces.</p>
+        <div class="proj-tools">
+          <span class="tool-tag">HTML</span><span class="tool-tag">CSS</span><span class="tool-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="proj-card reveal" style="--d:.1s">
+        <div class="proj-top">
+          <div><div class="proj-date">2024</div><div class="proj-name">Thrift Shop</div></div>
+          <a href="https://f-thirft.vercel.app/" target="_blank" rel="noopener" class="proj-live-btn">Code ↗</a>
+        </div>
+        <p class="proj-desc">Front-end web application for an online thrift store built using HTML, CSS, and JavaScript. Features product listings, category browsing, and interactive UI components with a responsive design for a seamless shopping experience.</p>
+        <div class="proj-tools">
+          <span class="tool-tag">JavaScript</span><span class="tool-tag">HTML</span><span class="tool-tag">CSS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="sec">
+    <div class="sec-label reveal">05 / Curriculum Vitae</div>
+
+    <!-- Header row: title + print button side by side -->
+    <div class="resume-sec-header reveal" style="--d:.05s">
+      <h2 class="sec-title">My <span class="accent">Resume</span></h2>
+      <div class="resume-header-btns">
+        <a href="LunaCV.pdf" download="LunaCV.pdf" class="btn-download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download CV
+        </a>
+        <button class="btn-print" onclick="window.print()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <polyline points="6 9 6 2 18 2 18 9"/>
+            <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
+            <rect x="6" y="14" width="12" height="8"/>
+          </svg>
+          Print Resume
+        </button>
+      </div>
+    </div>
+
+    <div class="resume-layout">
+
+      <!-- Left col -->
+      <div class="resume-left reveal" style="--d:.08s">
+        <div class="resume-profile-card">
+          <div class="res-photo-wrap">
+            <img src="images/1.JPG" alt="Christopher Acbang Luna Jr." class="res-photo">
+          </div>
+          <div class="res-identity">
+            <div class="res-name">Christopher Acbang Luna Jr.</div>
+            <div class="res-role">IT Student · Frontend Developer</div>
+            <div class="res-loc">📍 Philippines, Caloocan City</div>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <div class="rb-title">Contact</div>
+          <div class="rb-item">✉️ ciejayluna30@gmail.com</div>
+          <div class="rb-item">🔗 09701334419</div>
+          <div class="rb-item">💻 github.com/ciejayluna30-ctrl</div>
+        </div>
+
+        <div class="resume-block">
+          <div class="rb-title">Skills Summary</div>
+          <div class="skills-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Canva</span>
+            <span class="skill-tag">CapCut</span>
+            <span class="skill-tag">Photoshop</span>
+            <span class="skill-tag">Lightroom</span>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <div class="rb-title">Certificates</div>
+          <div class="cert-item">
+            <div class="cert-icon">🏅</div>
+            <div><div class="cert-name">Add Certificate Name Here</div><div class="cert-from">Issuing Organization · Year</div></div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">🏅</div>
+            <div><div class="cert-name">Add Certificate Name Here</div><div class="cert-from">Issuing Organization · Year</div></div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">🏅</div>
+            <div><div class="cert-name">Add Certificate Name Here</div><div class="cert-from">Issuing Organization · Year</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right col -->
+      <div class="resume-right reveal" style="--d:.12s">
+        <div class="resume-block">
+          <div class="rb-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-year">2022 — Present</div>
+            <div class="edu-degree">Bachelor of Science in Information Technology</div>
+            <div class="edu-school">Our Lady of Fatima University</div>
+            <div class="edu-note">Currently enrolled · Graduating</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-year">2018 — 2022</div>
+            <div class="edu-degree">Senior High School — TVL Track</div>
+            <div class="edu-school">IIHC</div>
+            <div class="edu-note">STEM Strand · With Honors</div>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <div class="rb-title">Experience / Internship</div>
+          <div class="exp-item">
+            <div class="exp-period">2025 — 2026</div>
+            <div class="exp-role">System Tester</div>
+            <div class="exp-company">DICT · Quezon City, Kamuning</div>
+            <ul class="exp-list">
+              <li>Designing website and testing</li>
+              <li>Data Encoding - Intern of the Month</li>
+              <li>Payroll System, Frontend</li>
+            </ul>
+          </div>
+          <div class="exp-item">
+            <div class="exp-period">2020 — Present</div>
+            <div class="exp-role">Freelance Designer / Developer</div>
+            <div class="exp-company">Self-employed · Remote</div>
+            <ul class="exp-list">
+              <li>Designed and developed websites for local clients</li>
+              <li>Created graphic content for social media campaigns</li>
+              <li>Edited promotional videos for small businesses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sec">
+    <div class="sec-label reveal">06 / Contact</div>
+    <h2 class="sec-title reveal" style="--d:.05s">Get in <span class="accent">Touch</span></h2>
+    <div class="contact-layout">
+      <div class="contact-left reveal" style="--d:.05s">
+        <p class="contact-intro">
+          Have a project or opportunity in mind? Whether it's a quick question
+          or a full brief — I'd love to hear from you.
+        </p>
+        <div class="contact-links">
+          <!-- Email -->
+          <a href="mailto:ciejayluna30@gmail.com" class="c-link">
+            <span class="c-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="4" fill="#EA4335"/>
+                <path d="M4 7.5L12 13l8-5.5M4 7h16a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <div><div class="c-label">Email</div><div class="c-val">ciejayluna30@gmail.com</div></div>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/ciejay.luna.2025" target="_blank" class="c-link">
+            <span class="c-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="4" fill="#1877F2"/>
+                <path d="M15.5 8H13V6.5c0-.6.4-.7.7-.7H15V3.1l-2.7-.1c-2.9 0-3.5 2.2-3.5 3.6V8H7v3h1.8v8h3V11h2.3l.4-3z" fill="#fff"/>
+              </svg>
+            </span>
+            <div><div class="c-label">Facebook</div><div class="c-val">Ciejay Luna</div></div>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/_cjyln/" target="_blank" class="c-link">
+            <span class="c-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="ig" cx="30%" cy="107%" r="150%">
+                    <stop offset="0%" stop-color="#fdf497"/>
+                    <stop offset="5%" stop-color="#fdf497"/>
+                    <stop offset="45%" stop-color="#fd5949"/>
+                    <stop offset="60%" stop-color="#d6249f"/>
+                    <stop offset="90%" stop-color="#285AEB"/>
+                  </radialGradient>
+                </defs>
+                <rect width="24" height="24" rx="5" fill="url(#ig)"/>
+                <rect x="6.5" y="6.5" width="11" height="11" rx="3" stroke="#fff" stroke-width="1.5" fill="none"/>
+                <circle cx="12" cy="12" r="2.8" stroke="#fff" stroke-width="1.5" fill="none"/>
+                <circle cx="16.2" cy="7.8" r=".8" fill="#fff"/>
+              </svg>
+            </span>
+            <div><div class="c-label">Instagram</div><div class="c-val">@_cjyln</div></div>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/ciejayluna30-ctrl" target="_blank" class="c-link">
+            <span class="c-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="4" fill="#1b1f24"/>
+                <path fill="#fff" d="M12 3C7.03 3 3 7.03 3 12c0 3.98 2.58 7.36 6.16 8.55.45.08.61-.19.61-.43v-1.53c-2.5.54-3.03-1.21-3.03-1.21-.41-1.04-1-1.32-1-1.32-.82-.56.06-.55.06-.55.9.06 1.38.93 1.38.93.8 1.37 2.1.97 2.61.74.08-.58.31-.97.57-1.19-1.99-.23-4.09-1-4.09-4.43 0-.98.35-1.78.93-2.41-.09-.23-.4-1.14.09-2.37 0 0 .76-.24 2.49.93A8.7 8.7 0 0112 7.42c.77 0 1.54.1 2.26.3 1.72-1.17 2.48-.93 2.48-.93.49 1.23.18 2.14.09 2.37.58.63.93 1.43.93 2.41 0 3.44-2.1 4.2-4.1 4.42.32.28.61.83.61 1.67v2.47c0 .24.16.52.62.43C18.42 19.36 21 15.98 21 12c0-4.97-4.03-9-9-9z"/>
+              </svg>
+            </span>
+            <div><div class="c-label">GitHub</div><div class="c-val">@ciejayluna30-ctrl</div></div>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal" style="--d:.1s" action="https://formspree.io/f/mreayawd" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <select>
+            <option value="">Select a topic...</option>
+            <option>Internship Opportunity</option>
+            <option>Freelance Project</option>
+            <option>Collaboration</option>
+            <option>Just saying hi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me about your project or opportunity..."></textarea>
+        </div>
+        <button type="submit" id="send-btn" class="btn-primary">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-name">Christopher Acbang Luna Jr.</div>
+    <div class="footer-note">IT Student · Built with care · 2025</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
