@@ -88,18 +88,31 @@ const serviceData = {
   'video-editing': {
     title: 'Video Editing',
     note: 'Basic editing with transitions, color grading, text overlays, and background music. Suitable for vlogs, reels, and short-form social content.',
+    folder: 'images/video',
+    count: 3,
+    ext: 'mp4',
+    isVideo: true,
   },
   'graphic-design': {
     title: 'Graphic Designing',
     note: 'Posters, social media graphics, banners, and visual branding using Canva and Photoshop.',
+    folder: 'images/graphic',
+    count: 3,
+    ext: 'jpg',
   },
   'web-design': {
     title: 'Web Design',
     note: 'Clean, responsive websites built from scratch using HTML, CSS, JavaScript, and PHP.',
+    folder: 'images/web',
+    count: 3,
+    ext: 'jpg',
   },
   'vexel-art': {
     title: 'Vexel Art',
     note: 'Digital vector-style portraits and illustrations from photo references.',
+    folder: 'images/vexel',
+    count: 3,
+    ext: 'jpg',
   },
 };
 
@@ -107,6 +120,44 @@ function openService(key) {
   const data = serviceData[key];
   document.getElementById('modal-title').textContent = data.title;
   document.getElementById('modal-note').textContent   = data.note;
+
+  // Build image/video grid
+  const container = document.getElementById('modal-examples');
+  container.innerHTML = '';
+  for (let i = 1; i <= data.count; i++) {
+    if (data.isVideo) {
+      const video = document.createElement('video');
+      video.src = `${data.folder}/${i}.${data.ext}`;
+      video.className = 'modal-img modal-video';
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.controls = true;
+      video.onerror = () => video.style.display = 'none';
+      container.appendChild(video);
+    } else {
+      const img = document.createElement('img');
+      img.src = `${data.folder}/${i}.${data.ext}`;
+      img.alt = `${data.title} example ${i}`;
+      img.className = 'modal-img';
+      img.loading = 'lazy';
+      img.onerror = () => img.style.display = 'none';
+      // Click to open lightbox
+      img.addEventListener('click', () => {
+        const lb = document.createElement('div');
+        lb.className = 'lightbox';
+        const full = document.createElement('img');
+        full.src = img.src;
+        full.alt = img.alt;
+        lb.appendChild(full);
+        lb.addEventListener('click', () => document.body.removeChild(lb));
+        document.body.appendChild(lb);
+      });
+      container.appendChild(img);
+    }
+  }
+
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
