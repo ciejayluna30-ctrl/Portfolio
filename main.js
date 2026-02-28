@@ -88,10 +88,13 @@ const serviceData = {
   'video-editing': {
     title: 'Video Editing',
     note: 'Basic editing with transitions, color grading, text overlays, and background music. Suitable for vlogs, reels, and short-form social content.',
-    folder: 'images/video',
-    count: 3,
-    ext: 'mp4',
     isVideo: true,
+    links: [
+      { label: 'Video Sample 1', url: 'https://drive.google.com/file/d/1udnTIAvr9oNU57GMWyf3oV0IDNxsYB7v/view?usp=drive_link' },
+      { label: 'Video Sample 2', url: 'https://drive.google.com/file/d/1NUXARo1Mlpe6rGL-Ig20HNHm4wQ4-uyn/view?usp=drive_link' },
+      { label: 'Video Sample 3', url: 'https://drive.google.com/file/d/14GIBjH692H14_KFC0GMNSlt72KujxIuR/view?usp=drive_link' },
+      { label: 'Video Sample 4', url: 'https://drive.google.com/file/d/192jV12dN0EtxmnkuuGg9AbWtRaVcaHuG/view?usp=drive_link' },
+    ],
   },
   'graphic-design': {
     title: 'Graphic Designing',
@@ -124,19 +127,19 @@ function openService(key) {
   // Build image/video grid
   const container = document.getElementById('modal-examples');
   container.innerHTML = '';
-  for (let i = 1; i <= data.count; i++) {
-    if (data.isVideo) {
-      const video = document.createElement('video');
-      video.src = `${data.folder}/${i}.${data.ext}`;
-      video.className = 'modal-img modal-video';
-      video.autoplay = true;
-      video.loop = true;
-      video.muted = true;
-      video.playsInline = true;
-      video.controls = true;
-      video.onerror = () => video.style.display = 'none';
-      container.appendChild(video);
-    } else {
+
+  if (data.isVideo) {
+    data.links.forEach(item => {
+      const link = document.createElement('a');
+      link.href = item.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.className = 'modal-video-link';
+      link.textContent = `▶ ${item.label}`;
+      container.appendChild(link);
+    });
+  } else {
+    for (let i = 1; i <= data.count; i++) {
       const img = document.createElement('img');
       img.src = `${data.folder}/${i}.${data.ext}`;
       img.alt = `${data.title} example ${i}`;

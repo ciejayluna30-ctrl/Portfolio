@@ -1098,3 +1098,20 @@ footer {
     @media (max-width: 768px) {
       .pdf-modal { height: 95vh; }
     }
+
+    .modal-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #00a0c4;
+  color: #fff;
+  border-radius: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.modal-video-link:hover {
+  background: #007fa0;
+}
