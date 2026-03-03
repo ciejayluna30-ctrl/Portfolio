@@ -94,7 +94,7 @@ const serviceData = {
       { label: 'Video Sample 2', url: 'https://drive.google.com/file/d/1udnTIAvr9oNU57GMWyf3oV0IDNxsYB7v/view?usp=sharing' },
       { label: 'Video Sample 3', url: 'https://drive.google.com/file/d/192jV12dN0EtxmnkuuGg9AbWtRaVcaHuG/view?usp=sharing' },
       { label: 'Video Sample 4', url: 'https://drive.google.com/file/d/1NUXARo1Mlpe6rGL-Ig20HNHm4wQ4-uyn/view?usp=sharing' },
-      { label: 'Video Sample 4', url: 'https://drive.google.com/file/d/14GIBjH692H14_KFC0GMNSlt72KujxIuR/view?usp=sharing' },
+      { label: 'Video Sample 5', url: 'https://drive.google.com/file/d/14GIBjH692H14_KFC0GMNSlt72KujxIuR/view?usp=sharing' },
     ],
   },
   'graphic-design': {
